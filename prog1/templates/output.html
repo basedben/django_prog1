@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>OUTPUT</title>
+        <style>
+            table,th,td{
+                border:1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            th,td{
+                padding:10px;
+            }
+            .mid{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+        {% block content%} 
+            <table class="mid">
+                <tr>
+                    <th colspan="2">
+                        <center>VIEW DETAILS</center>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <td>{{NAME}}</td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td>{{PASSWORD}}</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>{{EMAIL}}</td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td>{{ADDRESS}}</td>
+                </tr>
+            </table>
+        {% endblock %}
+    </body>
+</html>
